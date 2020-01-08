@@ -1,0 +1,27 @@
+function accum(s) {
+
+  //declaring variables
+  var letterCount = 1;
+  var newStr = "";
+  
+  //for loop iterating over the size of accum's parameter
+  for(var i = 0; i < s.length; i++) {
+  
+    //adding letter to newString and changing first index of each character input to uppercase
+    newStr += s[i].toUpperCase();
+    
+    //adding letter to newString and changing every character to lowercase
+    for(var j = 1; j < letterCount; j++) {
+      newStr += s[i].toLowerCase();
+    }
+    //adding a counter to 'letterCount'
+    letterCount++;
+    
+    //adding a '-' between each character within accum's parameter
+    if(i != (s.length - 1)) {
+      newStr += '-';
+    }
+  }
+  //returning newStr after for loop finishes iterating
+  return newStr;
+}
